@@ -1,4 +1,5 @@
-window.eval(`function I(_0x3bfde0) {
+window.eval(`
+function I(_0x3bfde0) {
     var O = document.createElement("script");
     O.type = "text/javascript";
     O.textContent = "(" + _0x3bfde0 + ")(this);";
@@ -36,8 +37,6 @@ I(function () {
     new Function("console.clear()")();
 });
 
-
-
 I(function () {
     (function () {
         let log = console.log;
@@ -49,6 +48,7 @@ I(function () {
 
         let disableAimbot = 0;
         setObserve();
+        
         function enviarCodigo(d) {
             let g = {
                 call: "lood",
@@ -56,17 +56,21 @@ I(function () {
             };
             window.postMessage(g);
         }
+        
         function Aim() {
             this.dragon2d = null;
             this.WindMeter = null;
             this.game = null;
+            
             this.InitGame = Z => {
                 this.game = Z;
                 m();
             };
+            
             this.InitDragon2d = Z => {
                 this.dragon2d = Z;
             };
+            
             let d = this;
             let e = 0;
             this.manual = 0;
@@ -79,22 +83,27 @@ I(function () {
             let j = 1;
             let k = 0;
             this.TornadoPower = 0;
+            
             let l = () => {
                 let a1 = [1, 2, 3, 0];
                 e = a1[e];
             };
+            
             this.wa = 0;
             this.wp = 0;
+            
             this.SetWind = Z => {
                 this.wp = Z[0];
                 this.wa = Z[1];
                 G();
             };
+            
             let m = () => {
                 o();
                 n();
                 R(this.me);
             };
+            
             let n = () => {
                 if (this.game.my_player_index == -1) {
                     return;
@@ -125,6 +134,7 @@ I(function () {
                     });
                 });
             };
+            
             let o = () => {
                 ClearInterval(this.time);
                 ClearInterval(this.timeCam);
@@ -142,12 +152,14 @@ I(function () {
                     r();
                 }
             };
+            
             this.pow = () => {
                 if (this.power <= 1 || !j) {
                     return 400;
                 }
                 return this.power;
             };
+            
             const p = Z => {
                 setTimeout(() => {
                     G();
@@ -156,42 +168,50 @@ I(function () {
                     q();
                 }
             };
+            
             const q = function () {
                 z();
                 s();
                 v();
                 x();
             };
+            
             const r = function () {
                 setTimeout(() => {
                     $("#buttonStart1v1").click();
                     $("#roomButtonStart").click();
                 }, random(5000, 40000));
             };
+            
             const s = function () {
                 var a0 = this.me.x > this.x2 ? 0 : 1;
                 if (this.me.look != a0) {
                     this.me.Look(a0);
                 }
             };
+            
             const v = function () {
                 this.me.body = 0;
                 this.me.ang = 60;
                 this.me.UpdateGuiAngle();
                 this.me.DrawPlayerAngle();
             };
+            
             const w = function (Z) {
                 $("#" + Z).trigger("click");
             };
+            
             const x = function () {
                 z();
                 setTimeout(() => {
                     this.me.dn.Shoot(this.power, [2, 0, random(65, 500)]);
                 }, random(500, 1500));
             };
+            
             const y = () => {
                 return this.game.players[this.game.my_player_index];
             };
+            
             const z = () => {
                 if (disableAimbot) {
                     return;
@@ -277,48 +297,26 @@ I(function () {
                     return;
                 }
             };
+            
             let A = 0;
             let B = 0;
+            
             let C = () => {
                 const Z = {
-                    xZikq: function (a0, a1) {
-                        return a0 - a1;
-                    },
-                    PhMQC: function (a0, a1) {
-                        return a0 - a1;
-                    },
-                    jmMmo: function (a0, a1) {
-                        return a0(a1);
-                    },
+                    xZikq: function (a0, a1) { return a0 - a1; },
+                    PhMQC: function (a0, a1) { return a0 - a1; },
+                    jmMmo: function (a0, a1) { return a0(a1); },
                     mvvQA: "width",
-                    bDnKp: function (a0, a1) {
-                        return a0 - a1;
-                    },
-                    DGOtB: function (a0, a1) {
-                        return a0(a1);
-                    },
+                    bDnKp: function (a0, a1) { return a0 - a1; },
+                    DGOtB: function (a0, a1) { return a0(a1); },
                     BEPTQ: "height",
-                    WkTtV: function (a0, a1) {
-                        return a0 <= a1;
-                    },
-                    uWAvr: function (a0, a1) {
-                        return a0 - a1;
-                    },
-                    DjQld: function (a0, a1) {
-                        return a0 >= a1;
-                    },
-                    jCtVq: function (a0, a1) {
-                        return a0 + a1;
-                    },
-                    Fgnse: function (a0, a1) {
-                        return a0 - a1;
-                    },
-                    pesiM: function (a0, a1) {
-                        return a0 <= a1;
-                    },
-                    TItXD: function (a0, a1) {
-                        return a0 >= a1;
-                    }
+                    WkTtV: function (a0, a1) { return a0 <= a1; },
+                    uWAvr: function (a0, a1) { return a0 - a1; },
+                    DjQld: function (a0, a1) { return a0 >= a1; },
+                    jCtVq: function (a0, a1) { return a0 + a1; },
+                    Fgnse: function (a0, a1) { return a0 - a1; },
+                    pesiM: function (a0, a1) { return a0 <= a1; },
+                    TItXD: function (a0, a1) { return a0 >= a1; }
                 };
                 if (disableAimbot) {
                     return;
@@ -338,6 +336,7 @@ I(function () {
                 B = this.dragon2d.camera_x - 400;
                 A = this.dragon2d.camera_y - 300;
             };
+            
             function D(Z, a0, a1, a2, a3, a4) {
                 this.x0 = Z;
                 this.y0 = a0;
@@ -345,6 +344,7 @@ I(function () {
                 this.ax = a3;
                 this.ay = a4;
             }
+            
             function E(Z, a0) {
                 if (typeof a0 == "string") {
                     a0 = a0.split(",");
@@ -357,6 +357,7 @@ I(function () {
                 }
                 return a4;
             }
+            
             this.Zotata = Z => {
                 if (!i) {
                     return;
@@ -399,7 +400,9 @@ I(function () {
                 this.c = -a6;
                 this.shoot_ready = 1;
             };
+            
             let F;
+            
             let G = () => {
                 if (disableAimbot) {
                     return;
@@ -435,10 +438,10 @@ I(function () {
                     }
                 }, 0);
             };
+            
             let I = this;
             let K;
             let N = !0;
-
 
             function Q(Z) {
                 i = !1;
@@ -447,14 +450,16 @@ I(function () {
                 $("#container_panel").hide();
                 Speak("Desactivado");
             }
+            
             const R = function (Z) {
-
                 console.log(Z);
             };
+            
             this.shot_type = 0;
             let S = 0;
             let V = false;
             let W = 0;
+            
             const X = () => {
                 let a1 = this;
                 $("body").on("keydown", a2 => {
@@ -505,6 +510,7 @@ I(function () {
                         W = 0;
                     }
                 });
+                
                 document.documentElement.addEventListener("wheel", a2 => {
                     if (!a1.game) {
                         return;
@@ -521,6 +527,7 @@ I(function () {
                         G();
                     }, 11);
                 });
+                
                 document.documentElement.addEventListener("mousemove", a2 => {
                     if (!a1.game || !W) {
                         return;
@@ -540,12 +547,15 @@ I(function () {
                         G();
                     }, 11);
                 });
+                
                 $(".ChatDialog input,#channelInput,#roomInput,#gameInput").focus(function (a2) {
                     S = 1;
                 });
+                
                 $(".ChatDialog input,#channelInput,#roomInput,#gameInput").blur(function (a2) {
                     S = 0;
                 });
+                
                 $("#btnShot1,#btnShot2,#btnShotSS").click(a2 => {
                     if (!a1.game) {
                         return;
@@ -561,8 +571,9 @@ I(function () {
                     }, 11);
                 });
             };
+            
             this.panel = function () {
-                const a1 = $("<div id=\"container_panel\" >\n        <input  id=\"container_panelheader\" width=\"223\" type=\"image\" src=\"https://i.imgur.com/6omykRW.gif\" alt=\"\"><br><br>\n\t\t<div class=\"cuadro\" >💙 Aimbot</div><input id=\"btn-1\" class=\"btn btn-round\"  type=\"checkbox\" checked><label for=\"btn-1\"></label>\n\t\t<div class=\"cuadro\" >💙 Trayectoria</div><input id=\"btn-2\" class=\"btn btn-round\"  type=\"checkbox\" checked><label for=\"btn-2\"></label>\n      <div class=\"cuadro\" >💙 AutoDragShot</div><input id=\"btn-3\" class=\"btn btn-round\"  type=\"checkbox\" checked><label for=\"btn-3\"></label>\n      <div class=\"cuadro\" >💙 Tornado</div><input id=\"btn-4\" class=\"btn btn-round\"  type=\"checkbox\" checked><label for=\"btn-4\"></label>\n      <div class=\"cuadro\" >💙 Espejo</div><input id=\"btn-5\" class=\"btn btn-round\"  type=\"checkbox\" checked><label for=\"btn-5\"></label>\n    \n      <br>\n      <br>\n      <br>\n\t   <br>\n\t   <br>\n\t   <br>\n       <input id=\"intrucciones\" type=\"button\" value = \"Info\">\n       <input id=\"date\"  value=\"0\" disabled=\"disabled\">\n\t   \n\t   </div>").hide().appendTo($("#chat_divs"));
+                const a1 = $("<div id=\\"container_panel\\" >\\n        <input  id=\\"container_panelheader\\" width=\\"223\\" type=\\"image\\" src=\\"https://i.imgur.com/6omykRW.gif\\" alt=\\"\\"><br><br>\\n\\t\\t<div class=\\"cuadro\\" >💙 Aimbot</div><input id=\\"btn-1\\" class=\\"btn btn-round\\"  type=\\"checkbox\\" checked><label for=\\"btn-1\\"></label>\\n\\t\\t<div class=\\"cuadro\\" >💙 Trayectoria</div><input id=\\"btn-2\\" class=\\"btn btn-round\\"  type=\\"checkbox\\" checked><label for=\\"btn-2\\"></label>\\n      <div class=\\"cuadro\\" >💙 AutoDragShot</div><input id=\\"btn-3\\" class=\\"btn btn-round\\"  type=\\"checkbox\\" checked><label for=\\"btn-3\\"></label>\\n      <div class=\\"cuadro\\" >💙 Tornado</div><input id=\\"btn-4\\" class=\\"btn btn-round\\"  type=\\"checkbox\\" checked><label for=\\"btn-4\\"></label>\\n      <div class=\\"cuadro\\" >💙 Espejo</div><input id=\\"btn-5\\" class=\\"btn btn-round\\"  type=\\"checkbox\\" checked><label for=\\"btn-5\\"></label>\\n    \\n      <br>\\n      <br>\\n      <br>\\n\\t   <br>\\n\\t   <br>\\n\\t   <br>\\n       <input id=\\"intrucciones\\" type=\\"button\\" value = \\"Info\\">\\n       <input id=\\"date\\"  value=\\"0\\" disabled=\\"disabled\\">\\n\\t   \\n\\t   </div>").hide().appendTo($("#chat_divs"));
                 a1[0].children[0].src = "https://i.imgur.com/6omykRW.gif";
                 a1.show();
                 dragElement(document.getElementById("container_panel"));
@@ -570,6 +581,7 @@ I(function () {
                 this.Trayectoria = 1;
                 this.Tornado = 1;
                 this.Espejo = 1;
+                
                 $("#btn-1").click(() => {
                     if (this.Aimbot) {
                         this.Aimbot = 0;
@@ -583,6 +595,7 @@ I(function () {
                         $("#powerMark").show();
                     }
                 });
+                
                 $("#btn-2").click(() => {
                     if (this.Trayectoria) {
                         this.Trayectoria = 0;
@@ -597,6 +610,7 @@ I(function () {
                     }
                     ;
                 });
+                
                 $("#btn-3").click(() => {
                     if (j) {
                         j = 0;
@@ -609,6 +623,7 @@ I(function () {
                     }
                     ;
                 });
+                
                 $("#btn-4").click(() => {
                     if (this.Tornado) {
                         this.Tornado = 0;
@@ -623,6 +638,7 @@ I(function () {
                     }
                     ;
                 });
+                
                 $("#btn-5").click(() => {
                     if (this.Espejo) {
                         this.Espejo = 0;
@@ -637,134 +653,75 @@ I(function () {
                     }
                     ;
                 });
+                
                 $("#intrucciones").click(function () {
                     alertify.alert("🟩🟩🟩TECLAS🟩🟩🟩 <br><br> Q:  Cambia Enemigo<br>🖱Rueda Mouse:  Mover Trayectoria <br> F:  Disparo TELEPORT/AUTOMATICO.<br> ª:  Ocultar Panel<br> Ctrl:AutoDragshot(ON/OFF)<br>");
                 });
+                
                 $("#container_panel").unbind().bind("mousedown touchstart", function (a2) {
                     a2.stopPropagation();
                     return !1;
                 });
             };
+            
             setTimeout(X, 7000);
             setTimeout(this.panel, 7000);
-
         }
-        ;
+        
         window.Pacmanbot = {};
         Pacmanbot.Utils = new Aim();
+        
         function dragElement(c) {
             const d = {
-                prgYp: function (l) {
-                    return l();
-                },
-                ydOeo: function (l, m) {
-                    return l != m;
-                },
+                prgYp: function (l) { return l(); },
+                ydOeo: function (l, m) { return l != m; },
                 EWzJA: "team",
-                tGWWZ: function (l, m) {
-                    return l == m;
-                },
-                nIKlA: function (l, m) {
-                    return l(m);
-                },
+                tGWWZ: function (l, m) { return l == m; },
+                nIKlA: function (l, m) { return l(m); },
                 inEoS: "#container_panel",
                 voJIM: ":visible",
                 apuen: "touch2.mp3",
-                ULyry: function (l, m) {
-                    return l(m);
-                },
-                aHAIT: function (l, m) {
-                    return l(m);
-                },
-                zaiuB: function (l, m) {
-                    return l == m;
-                },
-                XRnzd: function (l, m) {
-                    return l == m;
-                },
-                sCXnu: function (l) {
-                    return l();
-                },
-                Cgcav: function (l, m) {
-                    return l == m;
-                },
+                ULyry: function (l, m) { return l(m); },
+                aHAIT: function (l, m) { return l(m); },
+                zaiuB: function (l, m) { return l == m; },
+                XRnzd: function (l, m) { return l == m; },
+                sCXnu: function (l) { return l(); },
+                Cgcav: function (l, m) { return l == m; },
                 rdTng: "#btn-3",
-                ujSLu: function (l, m, n) {
-                    return l(m, n);
-                },
-                PUCTw: function (l) {
-                    return l();
-                },
-                CTIVH: function (l, m) {
-                    return l !== m;
-                },
+                ujSLu: function (l, m, n) { return l(m, n); },
+                PUCTw: function (l) { return l(); },
+                CTIVH: function (l, m) { return l !== m; },
                 sVQju: "ubImT",
                 oRjie: "WNqhI",
                 aEjVH: "3|5|2|1|4|0",
-                TTIVy: function (l, m) {
-                    return l + m;
-                },
+                TTIVy: function (l, m) { return l + m; },
                 OVmNy: "https://gumbao.net/",
                 JiETN: "static/audio/",
-                jDxWz: function (l, m) {
-                    return l === m;
-                },
+                jDxWz: function (l, m) { return l === m; },
                 bdIEv: "ZqyFD",
                 XOfAQ: "KUbJY",
-                UGwmT: function (l, m) {
-                    return l - m;
-                },
-                HtKkD: function (l, m) {
-                    return l - m;
-                },
-                Onlty: function (l, m) {
-                    return l - m;
-                },
-                YevSf: function (l, m) {
-                    return l(m);
-                },
+                UGwmT: function (l, m) { return l - m; },
+                HtKkD: function (l, m) { return l - m; },
+                Onlty: function (l, m) { return l - m; },
+                YevSf: function (l, m) { return l(m); },
                 DYtlq: "width",
-                cIgSV: function (l, m) {
-                    return l(m);
-                },
+                cIgSV: function (l, m) { return l(m); },
                 Mvvix: "height",
-                LBVcO: function (l, m) {
-                    return l <= m;
-                },
-                GafGB: function (l, m) {
-                    return l - m;
-                },
-                hanTu: function (l, m) {
-                    return l >= m;
-                },
-                KAEgp: function (l, m) {
-                    return l <= m;
-                },
-                qlVAv: function (l, m) {
-                    return l - m;
-                },
-                PwhcJ: function (l, m) {
-                    return l >= m;
-                },
-                MtUGD: function (l, m) {
-                    return l + m;
-                },
-                KNSPd: function (l) {
-                    return l();
-                },
-                YrVZt: function (l, m) {
-                    return l !== m;
-                },
+                LBVcO: function (l, m) { return l <= m; },
+                GafGB: function (l, m) { return l - m; },
+                hanTu: function (l, m) { return l >= m; },
+                KAEgp: function (l, m) { return l <= m; },
+                qlVAv: function (l, m) { return l - m; },
+                PwhcJ: function (l, m) { return l >= m; },
+                MtUGD: function (l, m) { return l + m; },
+                KNSPd: function (l) { return l(); },
+                YrVZt: function (l, m) { return l !== m; },
                 WmTaY: "PPPEo",
                 pnVje: "header",
                 ynFZv: "EdOFz",
                 NCOMH: "lqigj",
-                LkBZE: function (l, m) {
-                    return l + m;
-                },
-                lOhKk: function (l, m) {
-                    return l !== m;
-                },
+                LkBZE: function (l, m) { return l + m; },
+                lOhKk: function (l, m) { return l !== m; },
                 EhzqI: "UddQx",
                 qbKsO: "mYYSx"
             };
@@ -772,6 +729,7 @@ I(function () {
             var f = 0;
             var g = 0;
             var h = 0;
+            
             if (document.getElementById(d.MtUGD(c.id, d.pnVje))) {
                 if (d.CTIVH(d.ynFZv, d.NCOMH)) {
                     document.getElementById(d.LkBZE(c.id, d.pnVje)).onmousedown = i;
@@ -785,6 +743,7 @@ I(function () {
                     this.e.push(this.game.players[k]);
                 }
             }
+            
             function i(n) {
                 const o = {
                     XzmtS: function (p) {
@@ -860,6 +819,7 @@ I(function () {
                     }, 11);
                 }
             }
+            
             function j(n) {
                 if (d.jDxWz(d.bdIEv, d.XOfAQ)) {
                     var p = new n();
@@ -879,6 +839,7 @@ I(function () {
                     c.style.left = d.KAEgp(d.qlVAv(c.offsetLeft, e), 0) ? 0 : d.PwhcJ(d.UGwmT(c.offsetLeft, e), p) ? p : d.MtUGD(d.qlVAv(c.offsetLeft, e), "px");
                 }
             }
+            
             function k() {
                 const n = {
                     XQcsq: function (o) {
@@ -893,25 +854,31 @@ I(function () {
                 }
             }
         }
+        
         let RadToAngle = function (d) {
             return d * 180 / Math.PI;
         };
+        
         let AngleToRad = function (d) {
             return d * Math.PI / 180;
         };
+        
         let random = function (d, e) {
             return Math.floor(Math.random() * (e - d + 1) + d);
         };
+        
         let Speak = function (c) {
             var d = new SpeechSynthesisUtterance(c);
             speechSynthesis.speak(d);
         };
+        
         function Vector(c, d) {
             this.ang = c;
             this.size = d;
             this.x = Math.cos(AngleToRad(c)) * d;
             this.y = -Math.sin(AngleToRad(c)) * d;
         }
+        
         function J(c) {
             for (var e = 1; e <= 5; e++) {
                 c = H(c);
@@ -921,6 +888,7 @@ I(function () {
             c = JSON.parse(c);
             return c;
         }
+        
         function H(d) {
             var f = d.toString();
             var g = "";
@@ -929,12 +897,14 @@ I(function () {
             }
             return g;
         }
+        
         function AudioDB(d) {
             var g = new Audio();
             g.src = "https://gumbao.net/static/audio/" + d;
             g.play();
             return g;
         }
+        
         function tH(c) {
             var e = "";
             for (var f = 0; f < c.length; f++) {
@@ -942,629 +912,33 @@ I(function () {
             }
             return e;
         }
+        
         let M = {
-            "0": {
-                name: "ARMOR",
-                a: 73,
-                b: 0.74,
-                ax: 0,
-                ay: 398,
-                color: "#FF0000",
-                power: 936,
-                off: {
-                    F8: 510,
-                    S1: 760,
-                    S2: 940,
-                    DDplus: 1160,
-                    DD_S2: 1490,
-                    SS: 1310,
-                    TELEPORT: 860
-                },
-                ss: {
-                    F8: 510,
-                    S1: 410,
-                    S2: 590,
-                    DDplus: 610,
-                    DD_S2: 865,
-                    SS: 960,
-                    TELEPORT: 460
-                }
-            },
-            "1": {
-                name: "ICE",
-                a: 63.5,
-                b: 0.625,
-                ax: 0,
-                ay: 384,
-                color: "#d8dde3",
-                power: 996,
-                off: {
-                    F8: 490,
-                    S1: 740,
-                    S2: 890,
-                    DDplus: 1140,
-                    DD_S2: 1440,
-                    SS: 1290,
-                    TELEPORT: 480
-                },
-                ss: {
-                    F8: 490,
-                    S1: 390,
-                    S2: 540,
-                    DDplus: 590,
-                    DD_S2: 815,
-                    SS: 940,
-                    TELEPORT: 440
-                }
-            },
-            "2": {
-                name: "ADUKA",
-                a: 65.5,
-                b: 0.7,
-                ax: 0,
-                ay: 392,
-                color: "#6184c9",
-                power: 988,
-                off: {
-                    F8: 510,
-                    S1: 760,
-                    S2: 910,
-                    DDplus: 1160,
-                    DD_S2: 1460,
-                    SS: 1310,
-                    TELEPORT: 860
-                },
-                ss: {
-                    F8: 510,
-                    S1: 410,
-                    S2: 650,
-                    DDplus: 610,
-                    DD_S2: 835,
-                    SS: 960,
-                    TELEPORT: 460
-                }
-            },
-            "3": {
-                name: "LIGHTNING",
-                a: 65,
-                b: 0.72,
-                ax: 0,
-                ay: 394,
-                color: "#002fff",
-                power: 988,
-                off: {
-                    F8: 500,
-                    S1: 700,
-                    S2: 850,
-                    DDplus: 1100,
-                    DD_S2: 1400,
-                    SS: 1300,
-                    TELEPORT: 800
-                },
-                ss: {
-                    F8: 500,
-                    S1: 350,
-                    S2: 500,
-                    DDplus: 550,
-                    DD_S2: 775,
-                    SS: 950,
-                    TELEPORT: 400
-                }
-            },
-            "4": {
-                name: "BIGFOOT",
-                a: 90,
-                b: 0.74,
-                ax: 0,
-                ay: 396,
-                color: "#11458f",
-                power: 843,
-                off: {
-                    F8: 520,
-                    S1: 770,
-                    S2: 920,
-                    DDplus: 1170,
-                    DD_S2: 1470,
-                    SS: 1320,
-                    TELEPORT: 870
-                },
-                ss: {
-                    F8: 520,
-                    S1: 420,
-                    S2: 570,
-                    DDplus: 620,
-                    DD_S2: 845,
-                    SS: 970,
-                    TELEPORT: 470
-                }
-            },
-            "5": {
-                name: "JD",
-                a: 62.5,
-                b: 0.64,
-                ax: 0,
-                ay: 387,
-                color: "#9e1919",
-                power: 1000,
-                off: {
-                    F8: 500,
-                    S1: 750,
-                    S2: 840,
-                    DDplus: 1150,
-                    DD_S2: 1390,
-                    SS: 1300,
-                    TELEPORT: 850
-                },
-                ss: {
-                    F8: 500,
-                    S1: 400,
-                    S2: 490,
-                    DDplus: 600,
-                    DD_S2: 765,
-                    SS: 950,
-                    TELEPORT: 450
-                }
-            },
-            "6": {
-                name: "ASATE",
-                a: 75,
-                b: 0.765,
-                ax: 0,
-                ay: 412,
-                color: "#ffea00",
-                power: 936,
-                off: {
-                    F8: 480,
-                    S1: 730,
-                    S2: 880,
-                    DDplus: 1130,
-                    DD_S2: 1430,
-                    SS: 1280,
-                    TELEPORT: 830
-                },
-                ss: {
-                    F8: 480,
-                    S1: 380,
-                    S2: 530,
-                    DDplus: 580,
-                    DD_S2: 805,
-                    SS: 930,
-                    TELEPORT: 430
-                }
-            },
-            "7": {
-                name: "RANDOM",
-                a: 81,
-                b: 0.827,
-                ax: 0,
-                ay: 329,
-                color: "#9e1919",
-                power: 0,
-                off: {
-                    F8: 520,
-                    S1: 770,
-                    S2: 920,
-                    DDplus: 1170,
-                    DD_S2: 1470,
-                    SS: 1320,
-                    TELEPORT: 870
-                },
-                ss: {
-                    F8: 510,
-                    S1: 760,
-                    S2: 940,
-                    DDplus: 1160,
-                    DD_S2: 1490,
-                    SS: 1310,
-                    TELEPORT: 860
-                }
-            },
-            "8": {
-                name: "KNIGHT",
-                a: 65.5,
-                b: 0.695,
-                ax: 0,
-                ay: 360,
-                color: "#eeff00",
-                power: 983,
-                off: {
-                    F8: 550,
-                    S1: 810,
-                    S2: 950,
-                    DDplus: 1200,
-                    DD_S2: 1500,
-                    SS: 1390,
-                    TELEPORT: 900
-                },
-                ss: {
-                    F8: 550,
-                    S1: 450,
-                    S2: 600,
-                    DDplus: 650,
-                    DD_S2: 875,
-                    SS: 1040,
-                    TELEPORT: 500
-                }
-            },
-            "9": {
-                name: "FOX",
-                a: 61,
-                b: 0.61,
-                ax: 0,
-                ay: 398,
-                color: "#ffb073",
-                power: 960,
-                off: {
-                    F8: 480,
-                    S1: 710,
-                    S2: 900,
-                    DDplus: 1110,
-                    DD_S2: 1450,
-                    SS: 1280,
-                    TELEPORT: 810
-                },
-                ss: {
-                    F8: 480,
-                    S1: 360,
-                    S2: 550,
-                    DDplus: 560,
-                    DD_S2: 825,
-                    SS: 930,
-                    TELEPORT: 410
-                }
-            },
-            "10": {
-                name: "DRAGON",
-                a: 90,
-                b: 0.74,
-                ax: 0,
-                ay: 380,
-                color: "#8d73ff",
-                power: 880,
-                off: {
-                    F8: 550,
-                    S1: 800,
-                    S2: 950,
-                    DDplus: 1200,
-                    DD_S2: 1500,
-                    SS: 1350,
-                    TELEPORT: 900
-                },
-                ss: {
-                    F8: 550,
-                    S1: 450,
-                    S2: 600,
-                    DDplus: 650,
-                    DD_S2: 875,
-                    SS: 1000,
-                    TELEPORT: 500
-                }
-            },
-            "11": {
-                name: "NAK",
-                a: 82,
-                b: 0.74,
-                ax: 0,
-                ay: 360,
-                color: "#c75818",
-                power: 828,
-                off: {
-                    F8: 520,
-                    S1: 770,
-                    S2: 920,
-                    DDplus: 1170,
-                    DD_S2: 1470,
-                    SS: 1320,
-                    TELEPORT: 870
-                },
-                ss: {
-                    F8: 520,
-                    S1: 420,
-                    S2: 570,
-                    DDplus: 620,
-                    DD_S2: 845,
-                    SS: 970,
-                    TELEPORT: 470
-                }
-            },
-            "12": {
-                name: "TRICO",
-                a: 82,
-                b: 0.87,
-                ax: 0,
-                ay: 395,
-                color: "#3bcf0e",
-                power: 872,
-                off: {
-                    F8: 490,
-                    S1: 740,
-                    S2: 890,
-                    DDplus: 1140,
-                    DD_S2: 1440,
-                    SS: 1290,
-                    TELEPORT: 840
-                },
-                ss: {
-                    F8: 490,
-                    S1: 390,
-                    S2: 540,
-                    DDplus: 590,
-                    DD_S2: 815,
-                    SS: 940,
-                    TELEPORT: 440
-                }
-            },
-            "13": {
-                name: "MAGE",
-                a: 71.5,
-                b: 0.78,
-                ax: 0,
-                ay: 360,
-                color: "#0529f5",
-                power: 908,
-                off: {
-                    F8: 500,
-                    S1: 750,
-                    S2: 900,
-                    DDplus: 1150,
-                    DD_S2: 1450,
-                    SS: 1300,
-                    TELEPORT: 850
-                },
-                ss: {
-                    F8: 500,
-                    S1: 400,
-                    S2: 550,
-                    DDplus: 600,
-                    DD_S2: 825,
-                    SS: 950,
-                    TELEPORT: 450
-                }
-            },
-            "14": {
-                name: "TURTLE",
-                a: 72.5,
-                b: 0.75,
-                ax: 0,
-                ay: 389,
-                color: "#87ff91",
-                power: 924,
-                off: {
-                    F8: 490,
-                    S1: 740,
-                    S2: 970,
-                    DDplus: 1140,
-                    DD_S2: 1520,
-                    SS: 1290,
-                    TELEPORT: 840
-                },
-                ss: {
-                    F8: 490,
-                    S1: 390,
-                    S2: 620,
-                    DDplus: 590,
-                    DD_S2: 895,
-                    SS: 940,
-                    TELEPORT: 440
-                }
-            },
-            "15": {
-                name: "BOOMER",
-                a: 60,
-                b: 1.2,
-                ax: 0,
-                ay: 244,
-                color: "#FF0000",
-                power: 808,
-                off: {
-                    F8: 480,
-                    S1: 730,
-                    S2: 880,
-                    DDplus: 1130,
-                    DD_S2: 1430,
-                    SS: 1280,
-                    TELEPORT: 830
-                },
-                ss: {
-                    F8: 480,
-                    S1: 380,
-                    S2: 530,
-                    DDplus: 580,
-                    DD_S2: 805,
-                    SS: 930,
-                    TELEPORT: 430
-                }
-            },
-            "16": {
-                name: "ELECTRICO",
-                a: 73.5,
-                b: 0.74,
-                ax: 0,
-                ay: 398,
-                color: "#eded00",
-                power: 911,
-                off: {
-                    F8: 450,
-                    S1: 700,
-                    S2: 800,
-                    DDplus: 1100,
-                    DD_S2: 1350,
-                    SS: 1250,
-                    TELEPORT: 800
-                },
-                ss: {
-                    F8: 450,
-                    S1: 350,
-                    S2: 450,
-                    DDplus: 550,
-                    DD_S2: 725,
-                    SS: 900,
-                    TELEPORT: 400
-                }
-            },
-            "17": {
-                name: "GRUB",
-                a: 61,
-                b: 0.65,
-                ax: 0,
-                ay: 395,
-                color: "#c600f2",
-                power: 1012,
-                off: {
-                    F8: 490,
-                    S1: 740,
-                    S2: 890,
-                    DDplus: 1140,
-                    DD_S2: 1440,
-                    SS: 1290,
-                    TELEPORT: 840
-                },
-                ss: {
-                    F8: 490,
-                    S1: 390,
-                    S2: 540,
-                    DDplus: 590,
-                    DD_S2: 815,
-                    SS: 940,
-                    TELEPORT: 440
-                }
-            },
-            "18": {
-                name: "DRAGON2",
-                a: 93.5,
-                b: 0.78,
-                ax: 0,
-                ay: 398,
-                color: "#6f00ed",
-                power: 840,
-                off: {
-                    F8: 550,
-                    S1: 800,
-                    S2: 950,
-                    DDplus: 1200,
-                    DD_S2: 1500,
-                    SS: 1350,
-                    TELEPORT: 900
-                },
-                ss: {
-                    F8: 550,
-                    S1: 450,
-                    S2: 600,
-                    DDplus: 650,
-                    DD_S2: 875,
-                    SS: 1000,
-                    TELEPORT: 500
-                }
-            },
-            "19": {
-                name: "RAON",
-                a: 80,
-                b: 0.72,
-                ax: 0,
-                ay: 392,
-                color: "#ed0000",
-                power: 888,
-                off: {
-                    F8: 500,
-                    S1: 750,
-                    S2: 900,
-                    DDplus: 1150,
-                    DD_S2: 1450,
-                    SS: 1300,
-                    TELEPORT: 850
-                },
-                ss: {
-                    F8: 500,
-                    S1: 400,
-                    S2: 550,
-                    DDplus: 600,
-                    DD_S2: 825,
-                    SS: 950,
-                    TELEPORT: 450
-                }
-            },
-            "20": {
-                name: "RANDOMIZER",
-                a: 68,
-                b: 0.72,
-                ax: 0,
-                ay: 398,
-                color: "#00ed27",
-                power: 960,
-                off: {
-                    F8: 480,
-                    S1: 680,
-                    S2: 830,
-                    DDplus: 1080,
-                    DD_S2: 1380,
-                    SS: 1280,
-                    TELEPORT: 780
-                },
-                ss: {
-                    F8: 480,
-                    S1: 330,
-                    S2: 480,
-                    DDplus: 530,
-                    DD_S2: 755,
-                    SS: 930,
-                    TELEPORT: 380
-                }
-            },
-            "21": {
-                name: "FROG",
-                a: 55.5,
-                b: 0.67,
-                ax: 0,
-                ay: 311,
-                color: "#00ed8a",
-                power: 960,
-                off: {
-                    F8: 500,
-                    S1: 750,
-                    S2: 750,
-                    DDplus: 1300,
-                    DD_S2: 1300,
-                    SS: 1300,
-                    TELEPORT: 850
-                },
-                ss: {
-                    F8: 500,
-                    S1: 400,
-                    S2: 400,
-                    DDplus: 600,
-                    DD_S2: 675,
-                    SS: 950,
-                    TELEPORT: 450
-                }
-            },
-            "22": {
-                name: "KALSIDDON",
-                a: 70,
-                b: 0.67,
-                ax: 0,
-                ay: 398,
-                color: "#ff9d00",
-                power: 976,
-                off: {
-                    F8: 615,
-                    S1: 765,
-                    S2: 975,
-                    DDplus: 1165,
-                    DD_S2: 1525,
-                    SS: 1315,
-                    TELEPORT: 865
-                },
-                ss: {
-                    F8: 615,
-                    S1: 415,
-                    S2: 625,
-                    DDplus: 615,
-                    DD_S2: 900,
-                    SS: 965,
-                    TELEPORT: 465
-                }
-            }
+            "0": { name: "ARMOR", a: 73, b: 0.74, ax: 0, ay: 398, color: "#FF0000", power: 936, off: { F8: 510, S1: 760, S2: 940, DDplus: 1160, DD_S2: 1490, SS: 1310, TELEPORT: 860 }, ss: { F8: 510, S1: 410, S2: 590, DDplus: 610, DD_S2: 865, SS: 960, TELEPORT: 460 } },
+            "1": { name: "ICE", a: 63.5, b: 0.625, ax: 0, ay: 384, color: "#d8dde3", power: 996, off: { F8: 490, S1: 740, S2: 890, DDplus: 1140, DD_S2: 1440, SS: 1290, TELEPORT: 480 }, ss: { F8: 490, S1: 390, S2: 540, DDplus: 590, DD_S2: 815, SS: 940, TELEPORT: 440 } },
+            "2": { name: "ADUKA", a: 65.5, b: 0.7, ax: 0, ay: 392, color: "#6184c9", power: 988, off: { F8: 510, S1: 760, S2: 910, DDplus: 1160, DD_S2: 1460, SS: 1310, TELEPORT: 860 }, ss: { F8: 510, S1: 410, S2: 650, DDplus: 610, DD_S2: 835, SS: 960, TELEPORT: 460 } },
+            "3": { name: "LIGHTNING", a: 65, b: 0.72, ax: 0, ay: 394, color: "#002fff", power: 988, off: { F8: 500, S1: 700, S2: 850, DDplus: 1100, DD_S2: 1400, SS: 1300, TELEPORT: 800 }, ss: { F8: 500, S1: 350, S2: 500, DDplus: 550, DD_S2: 775, SS: 950, TELEPORT: 400 } },
+            "4": { name: "BIGFOOT", a: 90, b: 0.74, ax: 0, ay: 396, color: "#11458f", power: 843, off: { F8: 520, S1: 770, S2: 920, DDplus: 1170, DD_S2: 1470, SS: 1320, TELEPORT: 870 }, ss: { F8: 520, S1: 420, S2: 570, DDplus: 620, DD_S2: 845, SS: 970, TELEPORT: 470 } },
+            "5": { name: "JD", a: 62.5, b: 0.64, ax: 0, ay: 387, color: "#9e1919", power: 1000, off: { F8: 500, S1: 750, S2: 840, DDplus: 1150, DD_S2: 1390, SS: 1300, TELEPORT: 850 }, ss: { F8: 500, S1: 400, S2: 490, DDplus: 600, DD_S2: 765, SS: 950, TELEPORT: 450 } },
+            "6": { name: "ASATE", a: 75, b: 0.765, ax: 0, ay: 412, color: "#ffea00", power: 936, off: { F8: 480, S1: 730, S2: 880, DDplus: 1130, DD_S2: 1430, SS: 1280, TELEPORT: 830 }, ss: { F8: 480, S1: 380, S2: 530, DDplus: 580, DD_S2: 805, SS: 930, TELEPORT: 430 } },
+            "7": { name: "RANDOM", a: 81, b: 0.827, ax: 0, ay: 329, color: "#9e1919", power: 0, off: { F8: 520, S1: 770, S2: 920, DDplus: 1170, DD_S2: 1470, SS: 1320, TELEPORT: 870 }, ss: { F8: 510, S1: 760, S2: 940, DDplus: 1160, DD_S2: 1490, SS: 1310, TELEPORT: 860 } },
+            "8": { name: "KNIGHT", a: 65.5, b: 0.695, ax: 0, ay: 360, color: "#eeff00", power: 983, off: { F8: 550, S1: 810, S2: 950, DDplus: 1200, DD_S2: 1500, SS: 1390, TELEPORT: 900 }, ss: { F8: 550, S1: 450, S2: 600, DDplus: 650, DD_S2: 875, SS: 1040, TELEPORT: 500 } },
+            "9": { name: "FOX", a: 61, b: 0.61, ax: 0, ay: 398, color: "#ffb073", power: 960, off: { F8: 480, S1: 710, S2: 900, DDplus: 1110, DD_S2: 1450, SS: 1280, TELEPORT: 810 }, ss: { F8: 480, S1: 360, S2: 550, DDplus: 560, DD_S2: 825, SS: 930, TELEPORT: 410 } },
+            "10": { name: "DRAGON", a: 90, b: 0.74, ax: 0, ay: 380, color: "#8d73ff", power: 880, off: { F8: 550, S1: 800, S2: 950, DDplus: 1200, DD_S2: 1500, SS: 1350, TELEPORT: 900 }, ss: { F8: 550, S1: 450, S2: 600, DDplus: 650, DD_S2: 875, SS: 1000, TELEPORT: 500 } },
+            "11": { name: "NAK", a: 82, b: 0.74, ax: 0, ay: 360, color: "#c75818", power: 828, off: { F8: 520, S1: 770, S2: 920, DDplus: 1170, DD_S2: 1470, SS: 1320, TELEPORT: 870 }, ss: { F8: 520, S1: 420, S2: 570, DDplus: 620, DD_S2: 845, SS: 970, TELEPORT: 470 } },
+            "12": { name: "TRICO", a: 82, b: 0.87, ax: 0, ay: 395, color: "#3bcf0e", power: 872, off: { F8: 490, S1: 740, S2: 890, DDplus: 1140, DD_S2: 1440, SS: 1290, TELEPORT: 840 }, ss: { F8: 490, S1: 390, S2: 540, DDplus: 590, DD_S2: 815, SS: 940, TELEPORT: 440 } },
+            "13": { name: "MAGE", a: 71.5, b: 0.78, ax: 0, ay: 360, color: "#0529f5", power: 908, off: { F8: 500, S1: 750, S2: 900, DDplus: 1150, DD_S2: 1450, SS: 1300, TELEPORT: 850 }, ss: { F8: 500, S1: 400, S2: 550, DDplus: 600, DD_S2: 825, SS: 950, TELEPORT: 450 } },
+            "14": { name: "TURTLE", a: 72.5, b: 0.75, ax: 0, ay: 389, color: "#87ff91", power: 924, off: { F8: 490, S1: 740, S2: 970, DDplus: 1140, DD_S2: 1520, SS: 1290, TELEPORT: 840 }, ss: { F8: 490, S1: 390, S2: 620, DDplus: 590, DD_S2: 895, SS: 940, TELEPORT: 440 } },
+            "15": { name: "BOOMER", a: 60, b: 1.2, ax: 0, ay: 244, color: "#FF0000", power: 808, off: { F8: 480, S1: 730, S2: 880, DDplus: 1130, DD_S2: 1430, SS: 1280, TELEPORT: 830 }, ss: { F8: 480, S1: 380, S2: 530, DDplus: 580, DD_S2: 805, SS: 930, TELEPORT: 430 } },
+            "16": { name: "ELECTRICO", a: 73.5, b: 0.74, ax: 0, ay: 398, color: "#eded00", power: 911, off: { F8: 450, S1: 700, S2: 800, DDplus: 1100, DD_S2: 1350, SS: 1250, TELEPORT: 800 }, ss: { F8: 450, S1: 350, S2: 450, DDplus: 550, DD_S2: 725, SS: 900, TELEPORT: 400 } },
+            "17": { name: "GRUB", a: 61, b: 0.65, ax: 0, ay: 395, color: "#c600f2", power: 1012, off: { F8: 490, S1: 740, S2: 890, DDplus: 1140, DD_S2: 1440, SS: 1290, TELEPORT: 840 }, ss: { F8: 490, S1: 390, S2: 540, DDplus: 590, DD_S2: 815, SS: 940, TELEPORT: 440 } },
+            "18": { name: "DRAGON2", a: 93.5, b: 0.78, ax: 0, ay: 398, color: "#6f00ed", power: 840, off: { F8: 550, S1: 800, S2: 950, DDplus: 1200, DD_S2: 1500, SS: 1350, TELEPORT: 900 }, ss: { F8: 550, S1: 450, S2: 600, DDplus: 650, DD_S2: 875, SS: 1000, TELEPORT: 500 } },
+            "19": { name: "RAON", a: 80, b: 0.72, ax: 0, ay: 392, color: "#ed0000", power: 888, off: { F8: 500, S1: 750, S2: 900, DDplus: 1150, DD_S2: 1450, SS: 1300, TELEPORT: 850 }, ss: { F8: 500, S1: 400, S2: 550, DDplus: 600, DD_S2: 825, SS: 950, TELEPORT: 450 } },
+            "20": { name: "RANDOMIZER", a: 68, b: 0.72, ax: 0, ay: 398, color: "#00ed27", power: 960, off: { F8: 480, S1: 680, S2: 830, DDplus: 1080, DD_S2: 1380, SS: 1280, TELEPORT: 780 }, ss: { F8: 480, S1: 330, S2: 480, DDplus: 530, DD_S2: 755, SS: 930, TELEPORT: 380 } },
+            "21": { name: "FROG", a: 55.5, b: 0.67, ax: 0, ay: 311, color: "#00ed8a", power: 960, off: { F8: 500, S1: 750, S2: 750, DDplus: 1300, DD_S2: 1300, SS: 1300, TELEPORT: 850 }, ss: { F8: 500, S1: 400, S2: 400, DDplus: 600, DD_S2: 675, SS: 950, TELEPORT: 450 } },
+            "22": { name: "KALSIDDON", a: 70, b: 0.67, ax: 0, ay: 398, color: "#ff9d00", power: 976, off: { F8: 615, S1: 765, S2: 975, DDplus: 1165, DD_S2: 1525, SS: 1315, TELEPORT: 865 }, ss: { F8: 615, S1: 415, S2: 625, DDplus: 615, DD_S2: 900, SS: 965, TELEPORT: 465 } }
         };
+        
         function gp(_0x35bc23, _0x41b0ef, _0x2821ca, _0x201093, _0x58ca38, _0x563d20, _0x605f00, _0x55bc4d, _0x3c9416) {
             let _0x37c370 = -8;
             let _0x530eb1 = -60;
@@ -1625,12 +999,11 @@ I(function () {
                 power: _0x33435a
             };
         }
-        ;
+        
         function setObserve() {
             if (!Object.observe2) {
                 (function (e, t, n, r) {
                     'use strict';
-
                     var o;
                     var i;
                     var s = ["add", "update", "delete", "reconfigure", "setPrototype", "preventExtensions"];
@@ -2111,8 +1484,6 @@ I(function () {
     })();
 });
 
-
-
 I(function () {
     function f1() {
         console.log(this);
@@ -2154,17 +1525,20 @@ I(function () {
     turtleSS.src = "https://i.imgur.com/ir1arrY.png";
     let mageSS = new Image();
     mageSS.src = "https://i.imgur.com/nopYMxj.png";
+    
     function posToCamXY(_0x43b1af, _0x1bbc34) {
         return {
             x: _0x43b1af - this.dragon2d.camera_x + 400,
             y: _0x1bbc34 - this.dragon2d.camera_y + 300
         };
     }
+    
     const WEATHER_MIRROR = 7;
     const WEATHER_TORNADO = 8;
     const SIZE_TORNADO = 32;
     const SIZE_MIRROR = 25;
     const SIZE_ALL = 25;
+    
     function drawWeathers() {
         for (let _0x1b944c of this.dragon2d.weathers) {
             const _0xb6b44d = _0x1b944c.weather_type;
@@ -2179,6 +1553,7 @@ I(function () {
         }
         this.ctx.beginPath();
     }
+    
     function WeatherColision(_0x510532) {
         for (let _0x3abd16 of this.dragon2d.weathers) {
             const _0x4f5ee6 = _0x3abd16.weather_type;
@@ -2190,6 +1565,7 @@ I(function () {
             }
         }
     }
+    
     function WeatherMirror(_0x4e86e5, _0x409610) {
         const _0x3ff6d5 = this.zp.GetPosAtTime(_0x409610, jumps);
         let _0x504c93 = this.zp.GetAngleAtTime(_0x409610, jumps);
@@ -2205,8 +1581,8 @@ I(function () {
             jumps.push(_0x43d95b);
             this.timeTemp = _0x409610 + 10;
         }
-        ;
     }
+    
     function WeatherTornado(_0x56186e, _0x573e0c) {
         const _0x4561e4 = SIZE_TORNADO * (_0x56186e.size / 128);
         let _0x21c8ea = this.zp.GetPosAtTime(_0x573e0c, jumps);
@@ -2243,12 +1619,13 @@ I(function () {
             jumpsT4 = _0x162b53;
         }
     }
+    
     Pacmanbot.Utils['C'] = function () {
         if (!this.game) {
             return;
         }
         if (!$("#lines").length) {
-            canva = $("<canvas id=\"lines\"></canvas>").appendTo($("#gameScreen"));
+            canva = $("<canvas id=\\"lines\\"></canvas>").appendTo($("#gameScreen"));
             let _0x4fe33e = document.getElementById("lines");
             this.ctx = _0x4fe33e.getContext("2d");
             _0x4fe33e.width = 800;
@@ -2462,6 +1839,7 @@ I(function () {
             }
             this.ctx.stroke();
         };
+        
         let _0x574c24 = (_0x232ea1, _0x3abe07, _0x2eb1a9) => {
             if (_0x232ea1 == _0x2eb1a9) {
                 this.ctx.fillStyle = "black";
@@ -2475,8 +1853,10 @@ I(function () {
                 this.ctx.strokeStyle = "red";
             }
         };
+        
         let _0x1eb113;
         let _0x30b8db;
+        
         let _0x3a0e12 = (_0x4ddf7f, _0x412e38, _0xba94bd) => {
             if (_0x1eb113 != Math.sign(_0xba94bd.a) && _0x1eb113 < 0) {
                 _0x30b8db = _0x4ddf7f;
@@ -2494,6 +1874,7 @@ I(function () {
                 this.ctx.strokeStyle = "lime";
             }
         };
+        
         this.ctx.beginPath();
         this.ctx.fillStyle = "black";
         this.ctx.font = "12px Arial";
@@ -2525,6 +1906,7 @@ I(function () {
             this.Power_Full = this.mobile.power;
         }
         this.power_return = Math.round(this.power * this.Power_Full / 400);
+        
         switch (this.mobile.name) {
             case "TRICO":
                 _0x1011a5("line", 0, 0, []);
@@ -2651,27 +2033,33 @@ I(function () {
                 break;
         }
     };
+    
     function Vector(_0x3a2ed9, _0x3f8519) {
         this.ang = _0x3a2ed9;
         this.size = _0x3f8519;
         this.x = Math.cos(AngleToRad(_0x3a2ed9)) * _0x3f8519;
         this.y = -Math.sin(AngleToRad(_0x3a2ed9)) * _0x3f8519;
     }
+    
     function AngleToRad(_0x1b9361) {
         return _0x1b9361 * Math.PI / 180;
     }
+    
     function RadToAngle(_0x1bdf1a) {
         return _0x1bdf1a * 180 / Math.PI;
     }
+    
     function Dist2Points(_0x2ce82c, _0x5518c7, _0x3dfc76, _0x475fc1) {
         return Math.hypot(_0x3dfc76 - _0x2ce82c, _0x475fc1 - _0x5518c7);
     }
+    
     function CalcOrbitPoint(_0x32bc21, _0x4e2604, _0x5c60ca, _0x415dff) {
         return {
             x: _0x32bc21 + _0x5c60ca * Math.cos(AngleToRad(_0x415dff)),
             y: _0x4e2604 - _0x5c60ca * Math.sin(AngleToRad(_0x415dff))
         };
     }
+    
     function ZotataPhysics(_0x41be8b, _0x393140, _0x508ced, _0x3a2ba0, _0x2c97a3, _0x160c38) {
         this.x0 = _0x41be8b;
         this.y0 = _0x393140;
@@ -2679,6 +2067,7 @@ I(function () {
         this.ax = _0x2c97a3;
         this.ay = _0x160c38;
     }
+    
     ZotataPhysics.prototype.GetPosAtTime = function (_0x2b842f, _0x41da57) {
         _0x41da57 ||= [];
         var _0x59ef81 = -1;
@@ -2730,6 +2119,7 @@ I(function () {
             z: _0x352c4a
         };
     };
+    
     ZotataPhysics.prototype.GetPosAtTimeOrbit = function (_0x29b15e, _0x1529b6, _0x37a607, _0x3367eb, _0x5e8fba, _0xef43c0) {
         var _0x5271fc = _0x29b15e / 1000;
         _0x29b15e = this.GetPosAtTime(_0x29b15e, _0x1529b6);
@@ -2737,6 +2127,7 @@ I(function () {
         _0x37a607.z = _0x29b15e.z;
         return _0x37a607;
     };
+    
     ZotataPhysics.prototype.GetPosAtTimeWave = function (_0x3d2e1d, _0x21dbe6, _0x5beb73) {
         _0x21dbe6 = this.GetPosAtTime(_0x3d2e1d, _0x21dbe6);
         var _0x51da4e = _0x21dbe6.a;
@@ -2756,21 +2147,25 @@ I(function () {
         _0x3d2e1d.z = _0x21dbe6.z;
         return _0x3d2e1d;
     };
+    
     ZotataPhysics.prototype.GetAngleAtTime = function (_0x1269b4, _0x535306) {
         var _0x552383 = this.GetPosAtTime(_0x1269b4 - 5, _0x535306);
         var _0x40cc89 = this.GetPosAtTime(_0x1269b4 + 5, _0x535306);
         return RadToAngle(Math.atan2(_0x40cc89.y - _0x552383.y, _0x40cc89.x - _0x552383.x));
     };
+    
     ZotataPhysics.prototype.GetAngleAtTimeWave = function (_0x23e1d9, _0x261f74, _0x44844b) {
         var _0x499fe1 = this.GetPosAtTimeWave(_0x23e1d9 - 5, _0x261f74, _0x44844b);
         _0x23e1d9 = this.GetPosAtTimeWave(_0x23e1d9 + 5, _0x261f74, _0x44844b);
         return RadToAngle(Math.atan2(_0x23e1d9.y - _0x499fe1.y, _0x23e1d9.x - _0x499fe1.x));
     };
+    
     ZotataPhysics.prototype.GetPowerAtTime = function (_0x1bb2a3, _0x443395) {
         var _0x152b0f = this.GetPosAtTime(_0x1bb2a3, _0x443395);
         var _0x542aab = this.GetPosAtTime(_0x1bb2a3 - 1, _0x443395);
         return Math.sqrt((_0x152b0f.y - _0x542aab.y) ** 2 + (_0x152b0f.x - _0x542aab.x) ** 2) * 1000;
     };
+    
     ZotataPhysics.prototype.GetTimeMax = function (_0x1d8d16, _0x2601d7) {
         return Math.ceil(-this.v.y / this.ay) * 1000;
     };
@@ -2784,6 +2179,7 @@ I(function () {
         }
         throw _0x40a9e1 + " not found...";
     };
+    
     window.XA = function (_0x55b96b) {
         var _0x55b96b = _0x55b96b.split("=");
         if (_0x55b96b.length > 1) {
@@ -2806,7 +2202,7 @@ I(function () {
             }
         }
         const modScript = filterScript.replace("function _0x250d26", "window._0x6957=XA(_0x1b3b11.textContent);function _0x250d26")
-            .replace("eval(_0x13d5n7(_0x1d3n57));", `{
+            .replace("eval(_0x13d5n7(_0x1d3n57));", \`{
       let e = _0x13d5n7(_0x1d3n57);
 
         ///mod DragonFreeze
@@ -2836,7 +2232,7 @@ I(function () {
 
 
         eval(e);
-      };`)
+      };\`);
         window.eval(modScript);
 
         new Function("console.clear()")();
@@ -2859,4 +2255,5 @@ I(function () {
         */
 
     }, 1000);
-});`)
+});
+`);
